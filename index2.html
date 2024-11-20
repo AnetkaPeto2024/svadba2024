@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svadba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            background-color: #fefefe;
+            color: #333;
+        }
+        .slide {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .slide.show {
+            opacity: 1;
+        }
+        header {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .schedule, .menu {
+            margin: 20px 0;
+        }
+        .separator {
+            margin: 30px auto;
+            width: 80%;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide" id="slide1">
+        <header>Srdečne Vás vítame ...</header>
+    </div>
+    <div class="slide" id="slide2">
+        <img src="peto_anet2.jpg" alt="Červené srdce">
+    </div>
+    <div class="slide" id="slide3">
+        <div class="schedule">
+            <h2>Časový harmonogram</h2>
+            <ul>
+                <li>16:00 - Svadobný obrad</li>
+                <li>17:30 - Podpora slovenskej kultúry</li>                    
+                <li>18:00 - Večera</li>
+                <li>19:30 - Zoznámenie sa s okolím</li>
+                <li>20:00 - 1.pokus o tanec</li>
+                <li>22:00 - Krájanie torty (rozdelíme sa s vami :-) )</li>                
+                <li>23:45 - Čepčenie</li>
+                <li>24:00 - Kapustnica</li>   
+            </ul>
+        </div>
+    </div>
+    <div class="slide" id="slide4">
+        <hr class="separator">
+    </div>
+    <div class="slide" id="slide5">
+        <div class="menu">
+            <h2>Svadobné menu</h2>
+            <p>Tancujúce slížiky v polievkovej vode</p>
+            <p>Plávajúca sviečka s naparenou knedlou</p>
+            <p> *po večeri budú k dispozícii slovenské stoly</p>
+            <p> *(s jedlom a bez Švédov ;-) )</p>  
+        </div>
+    </div>
+    <script>
+        // Pole s prvkami, ktoré sa budú postupne zobrazovať
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        // Funkcia na zobrazenie ďalšieho slide
+        function showNextSlide() {
+            if (currentSlide < slides.length) {
+                slides[currentSlide].classList.add('show');
+                currentSlide++;
+                setTimeout(showNextSlide, 1000); // Nastavte čas medzi jednotlivými slide (v milisekundách)
+            }
+        }
+
+        // Spustiť animáciu po načítaní stránky
+        window.onload = () => {
+            showNextSlide();
+        };
+    </script>
+</body>
+</html>
