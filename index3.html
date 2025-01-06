@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#ffffff">
+    <title>Svadba</title>
+    <style>
+        /* Globálne štýly */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            background: url('pozadie.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .schedule, .menu {
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .schedule h2, .menu h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 10px;
+        }
+
+        ul li {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .separator {
+            margin: 30px 0;
+            width: 80%;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+
+        /* Responzívne štýly */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            header {
+                font-size: 1.6rem;
+            }
+
+            .schedule h2, .menu h2 {
+                font-size: 1.4rem;
+            }
+
+            ul li {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.4rem;
+            }
+
+            .schedule h2, .menu h2 {
+                font-size: 1.2rem;
+            }
+
+            ul li {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Obsah stránky -->
+    <div class="overlay">
+        <!-- Vitajte -->
+        <header>Veľmi pekne Vám všetkým ďakujeme ...</header>
+        <!-- Obrázok srdca -->
+        <img src="peto_anet2.jpg" alt="Červené srdce">
+        <!-- Časový harmonogram -->
+        <div class="schedule">
+            <h2>Časový harmonogram bol ...</h2>
+            <ul>
+                <li>16:00 - Svadobný obrad</li>
+                <li>17:30 - Podpora slovenskej kultúry</li>                    
+                <li>18:00 - Večera</li>
+                <li>19:30 - Zoznámenie sa s okolím</li>
+                <li>20:00 - 1.pokus o tanec</li>
+                <li>22:00 - Krájanie torty (rozdelíme sa s vami :-) )</li>                
+                <li>23:45 - Čepčenie</li>
+                <li>24:00 - Kapustnica</li>            
+            </ul>
+        </div>
+        <!-- Oddeľovač -->
+        <hr class="separator">
+        <!-- Menu -->
+        <div class="menu">
+            <h2>Svadobné menu bolo ...</h2>
+            <p>Tancujúce slížiky v polievkovej vode</p>
+            <p>Plávajúca sviečka s naparenou knedlou</p>
+            <p>  *po večeri budú k dispozícii slovenské stoly</p>
+            <p>  *(s jedlom a bez Švédov ;-) )</p>             
+        </div>
+    </div>
+
+    <!-- Obrázok na konci stránky -->
+    <img src="zaver2.jpg" alt="Záver svadby">
+</body>
+</html>
